@@ -2,8 +2,7 @@ import Link from "next/link";
 
 const path = [
   ["Upload", "Faculty add a recording"],
-  ["Amazon S3", "Stored in a private bucket"],
-  ["CloudFront", "Cached at an edge location near the viewer"],
+  ["Private Amazon S3", "Stores videos and serves time-limited links"],
   ["Your browser", "Plays after Cognito sign-in"],
 ];
 const folders = [
@@ -13,7 +12,6 @@ const folders = [
 ];
 const aws = [
   ["Amazon S3", "Stores every video; no public access."],
-  ["Amazon CloudFront", "Serves popular videos from the edge, so the bucket is not hit every time."],
   ["Amazon Cognito", "Sign-in, with Faculty and Students groups."],
   ["AWS IAM", "Least-privilege roles for each group."],
   ["Amazon CloudWatch", "Dashboards for storage, requests and sign-ups."],
@@ -50,7 +48,7 @@ export default function Home() {
       <section id="how" className="mx-auto max-w-6xl px-6 pb-20">
         <div className="relative rounded-2xl border border-line bg-white p-6 md:p-8">
           <p className="mb-6 font-display text-xl font-semibold">How a video reaches you</p>
-          <div className="relative grid gap-6 md:grid-cols-4">
+          <div className="relative grid gap-6 md:grid-cols-3">
             <div aria-hidden className="absolute left-0 right-0 top-[10px] hidden h-px bg-line md:block">
               <span className="travel-dot absolute -top-[5px] h-3 w-3 rounded-full bg-signal" />
             </div>
